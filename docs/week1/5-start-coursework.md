@@ -1,4 +1,4 @@
-# Choose a framework to use for coursework 1
+# 5. Choose a framework to use for coursework 1
 
 Completing the activities should have given you a basic introduction to each of the frameworks that
 can be used for coursework 1. This is unlikely to be enough for you to make an informed choice

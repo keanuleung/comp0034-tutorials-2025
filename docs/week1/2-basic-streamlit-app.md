@@ -1,4 +1,4 @@
-# Basic Streamlit app using the paralympics data
+# 2. Basic Streamlit app using the paralympics data
 
 In this and the following two activities, you will recreate the same app which will have a simple
 title, a table showing all the data from the paralympics data set and a chart. The purpose is to

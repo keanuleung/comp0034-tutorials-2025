@@ -1,4 +1,4 @@
-# Core concepts
+# 1. Core concepts
 
 This is a repeat of content from the lecture. If you attended the lecture, you can skip this.
 
@@ -34,7 +34,8 @@ An HTTP request contains a start line, headers, and body:
     - URL e.g. my-app/diary.html
     - HTTP version e.g. HTTP/1.0
 - HTTP Headers: additional information to be passed to the server
-- Body: GET requests do not usually have a body, POST request usually includes data in the body e.g. form data
+- Body: GET requests do not usually have a body, POST request usually includes data in the body e.g.
+  form data
 
 An HTTP response contains a status line, headers, and body:
 
@@ -50,7 +51,8 @@ You can view examples of HTTP requests and responses in a browser:
 
 - Find and open the developer tools/console window in your browser.
 - Find the network section within this.
-- Enter a URL in the browser, e.g. https://www.bbc.co.uk, and you should see the request and response
+- Enter a URL in the browser, e.g. https://www.bbc.co.uk, and you should see the request and
+  response
   details in the network section.
 
 You can also view an example of an HTTP request for a REST API which has JSON data instead of HTML,
@@ -73,7 +75,7 @@ HTML provides the basic structure of a web page.
 
 CSS provides the styling for the HTML elements on a web page.
 
-JavaScript is used to create interactive or dynamic elements in a web page on the browser. Note: 
+JavaScript is used to create interactive or dynamic elements in a web page on the browser. Note:
 there is no JavaScript coding in this course, and JavaScript is not considered in marking.
 
 The elements of the web page are constructed by the Python code on your web app server, which
@@ -118,7 +120,7 @@ You don't need to learn all the HTML tags, use a reference such
 as [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
 or [w3schools](https://www.w3schools.com/html/default.asp).
 
-## CSS
+### CSS
 
 CSS provides styles for HTML elements.
 
@@ -142,7 +144,8 @@ If applied to the following HTML, the text would display as red.
 <p> A paragraph element.</p>
 ```
 
-Style can be applied to all the occurrences of an HTML element, to all elements defined with a class,
+Style can be applied to all the occurrences of an HTML element, to all elements defined with a
+class,
 or to an individual element on a page defined by an ID.
 
 ```css
@@ -175,7 +178,7 @@ complex.
 Writing your own CSS styles is not covered in the course. You will focus on using CSS written by a
 third party that you will apply to your pages to style them.
 
-## JavaScript
+### JavaScript
 
 Programming language that enables you to dynamically update content, control multimedia, animate
 images etc. on web pages.
@@ -211,16 +214,15 @@ This generates the DOM and the CSS DOM and combines them:
 _Author of the tree
 diagram [Z Zhou](https://medium.com/@zhouzy/css-object-model-cssom-29d0a1951b5f)_
 
-You can then target elements to modify them or their style. Strategies to locate elements in the
-DOM include:
+You can then locate elements on a web page using the DOM and then make changes to the elements (
+update it, change the style, remove it etc.). Strategies to locate elements in the DOM include:
 
-- Find elements by id
+- Find elements by ID
 - Find elements by CSS class
 - Find elements by HTML tag
-- Find elements by navigating the tree
+- Find elements by navigating the tree e.g. from parent to child
 
-Finding elements by ID is the method often used in this module as the ID uniquely identifies
-an element on a page.
+Finding elements by ID is the method most often used in this module.
 
 ## Python web app code
 
@@ -277,7 +279,7 @@ coursework 1 so that you can make a more informed choice which to use for your a
 
 You will not be deploying your app to a live web server. To do this requires infrastructure and
 configuration not covered in the course. Instead, you will use features of the web application
-frameworks to run the code on your own computer, which will behave as a web server referred to as 
+frameworks to run the code on your own computer, which will behave as a web server referred to as
 'localhost'.
 
 Localhost refers to the hostname that means "this computer" in networking. It is usually associated
@@ -286,7 +288,8 @@ browser or use it in a program, you're telling the system to connect to a servic
 own machine rather than over the internet.
 
 Each app that you run on localhost needs to run on a port. Each of the web app frameworks defaults
-to a different port e.g. Flask uses 5000, FastAPI uses 8000, Dash uses 8050, and Streamlit uses 8501.
+to a different port e.g. Flask uses 5000, FastAPI uses 8000, Dash uses 8050, and Streamlit uses
+8501.
 You can change the default if you already have an app running on these ports.
 
 [Next activity](2-basic-streamlit-app.md)

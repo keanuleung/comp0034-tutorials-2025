@@ -1,4 +1,4 @@
-# Basic Dash app using the paralympics data
+# 3. Basic Dash app using the paralympics data
 
 In this activity you will recreate the same app using the Plotly Dash (Python) open source
 framework.
