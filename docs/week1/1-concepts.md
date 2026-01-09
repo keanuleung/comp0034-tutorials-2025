@@ -18,7 +18,7 @@ communication.
 
 In a Python web app:
 
-- User makes a **request** for a web resource e.g., by typing a URL into a browser.
+- User makes a **request** for a web resource e.g. by typing a URL into a browser.
 - This request gets received by the web server and passed to the app server.
 - The app server matches the request to a portion of the app's Python code. Often called a 'route'.
 - This Python code is called and when the code runs, it generates a **response** e.g. web page, JSON
@@ -26,17 +26,17 @@ In a Python web app:
 - The app server delivers this response back to the user via the web server using the HTTP protocol.
 - The user can then view the response by displaying it in a browser.
 
-A HTTP request contains a start line, headers and body:
+An HTTP request contains a start line, headers, and body:
 
 - Start line: e.g. GET my-app/diary.html HTTP/1.0
 
-    - HTTP Method e.g. GET, POST, DELETE etc
+    - HTTP Method e.g. GET, POST, DELETE, etc.
     - URL e.g. my-app/diary.html
     - HTTP version e.g. HTTP/1.0
 - HTTP Headers: additional information to be passed to the server
-- Body: no body usually with GET request, POST request usually includes data e.g. form data
+- Body: GET requests do not usually have a body, POST request usually includes data in the body e.g. form data
 
-A HTTP response contains a status line, headers and body:
+An HTTP response contains a status line, headers, and body:
 
 - Status line: e.g. HTTP/1.1 404 Not Found
 
@@ -50,11 +50,11 @@ You can view examples of HTTP requests and responses in a browser:
 
 - Find and open the developer tools/console window in your browser.
 - Find the network section within this.
-- Enter a URL in the browser, e.g. https://www.bbc.co.uk and you should see the request and response
+- Enter a URL in the browser, e.g. https://www.bbc.co.uk, and you should see the request and response
   details in the network section.
 
 You can also view an example of an HTTP request for a REST API which has JSON data instead of HTML,
-CSS, JavaScript etc. Try https://catfact.ninja/fact
+CSS, JavaScript, etc. Try https://catfact.ninja/fact
 
 ## Coursework application architecture
 
@@ -69,12 +69,12 @@ The overall solution architecture looks like this:
 
 ## Technologies used to generate and display a web page
 
-The basic structure of a web page is provided by HTML.
+HTML provides the basic structure of a web page.
 
-The styling for the HTML elements on a web page is provided by CSS.
+CSS provides the styling for the HTML elements on a web page.
 
-Interaction in a web page on the browser is typically provided using JavaScript. Note: there is no
-JavaScript coding in this course & JavaScript is not considered in marking.
+JavaScript is used to create interactive or dynamic elements in a web page on the browser. Note: 
+there is no JavaScript coding in this course, and JavaScript is not considered in marking.
 
 The elements of the web page are constructed by the Python code on your web app server, which
 returns the necessary files and content in an HTTP response.
@@ -116,7 +116,7 @@ Basic tag structure: `<start_tag>`some content`</end_tag>`, this is referred to 
 
 You don't need to learn all the HTML tags, use a reference such
 as [Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
-or [W3schools](https://www.w3schools.com/html/default.asp).
+or [w3schools](https://www.w3schools.com/html/default.asp).
 
 ## CSS
 
@@ -142,8 +142,8 @@ If applied to the following HTML, the text would display as red.
 <p> A paragraph element.</p>
 ```
 
-Style can be applied to all of occurences on an HTML element, to a elements defined with a class,
-or to an individual element on a page defined by an id.
+Style can be applied to all the occurrences of an HTML element, to all elements defined with a class,
+or to an individual element on a page defined by an ID.
 
 ```css
 /* Defines a style for all HTML H1 headings */
@@ -153,14 +153,17 @@ h1 {
 }
 
 /* Defines a style for applied to any HTML that includes this class in its definition. 
-For example: <p class="myclass">Hello</p> */
+For example: <p class="myclass">Hello</p> 
+*/
 .myclass {
     background-color: lightblue;
 }
 
 /* Defines a style only for the HTML element that has this ID. 
-IDs must be unique in an HTML document (web page). */
-#myid {
+IDs must be unique in an HTML document (web page). 
+e.g. <p id='first-para'>Hello</p>
+*/
+#first-para {
     font-family: arial;
 }
 ```
@@ -170,7 +173,7 @@ precedence. There are also places in which CSS styles can be defined. Defining s
 complex.
 
 Writing your own CSS styles is not covered in the course. You will focus on using CSS written by a
-3rd party that you will apply to your pages to style them.
+third party that you will apply to your pages to style them.
 
 ## JavaScript
 
@@ -216,13 +219,13 @@ DOM include:
 - Find elements by HTML tag
 - Find elements by navigating the tree
 
-Finding elements by ID is the method often used in the this module as the ID uniquely identifies
+Finding elements by ID is the method often used in this module as the ID uniquely identifies
 an element on a page.
 
 ## Python web app code
 
 The web application provides the functionality that handles the incoming HTTP request, handles the
-logic to generate a response and returns an HTTP response
+logic to generate a response, and returns an HTTP response
 
 Python acts as the backend language that processes data and dynamically generates content e.g.:
 
@@ -233,13 +236,13 @@ Python acts as the backend language that processes data and dynamically generate
 The server sends back an HTTP response, which could be:
 
 - a web page (HTML, CSS, JavaScript)
-- structured data (e.g., JSON from a REST API)
+- structured data (e.g. JSON from a REST API)
 
 The web apps often use the concept of a 'route' that defines the available URLs for the app and
 their associated Python functions.
 
 For example, this is a route for a Flask web app that generates an HTML page with the words "Hello,
-World!". If this app is run on localhost you would access it using `http://127.0.0.1:5000/hello`:
+World!" If this app is run on localhost you would access it using `http://127.0.0.1:5000/hello`:
 
 ```python
 from flask import Flask

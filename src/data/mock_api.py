@@ -19,7 +19,7 @@ def get_event_data():
         FileNotFoundError: if no event file was found
 
         """
-    data_file = Path(__file__).parent.joinpath("data", "paralympic_events.csv")
+    data_file = Path(__file__).parent.joinpath("paralympic_events.csv")
     try:
         if not data_file.exists():
             raise FileNotFoundError(f"Data file not found: {data_file}")
@@ -27,7 +27,8 @@ def get_event_data():
         if df.empty:
             return []
         json_data = df.to_json(orient='records')
-        return json.loads(json_data)
+        # json_data = df.to_json()
+        return json_data
     except FileNotFoundError:
         raise
     except (pd.errors.EmptyDataError, pd.errors.ParserError) as e:
